@@ -1,0 +1,26 @@
+<div class="container">
+<a href='{%url "home" %}'>home |</a>
+<a href='{%url "about" %}'>about |</a>
+<a href='{%url "contact" %}'>contact |</a>
+{% if request.user.is_authenticated %}
+{% if request.user.is_staff %}
+<a href='{%url "teachers:examlist" %}'>view marks| </a>
+<a href='{%url "teachers:addmark" %}'>Add Exam Marks |</a>
+<a href='{%url "continuous:listcontinuous" %}'>view coursework |</a>
+<a href='{%url "continuous:addcontinuous" %}'>Add coursework |</a>
+<a href='{%url "attendance:attendancelist" %}'>view attendance |</a>
+<a href='{%url "attendance:addattendance" %}'>Add attendance |</a>
+<a href='{%url "register" %}'>register|</a>
+<a href='{%url "logout" %}'> logout|</a>
+{% else %}
+<a href='{%url "students:studentscontinuous" %}'>view coursework| </a>
+<a href='{%url "students:exammark" %}'>view Exams |</a>
+<a href='{%url "students:attendance" %}'>view attendance |</a>
+<a href='{%url "students:fees" %}'>view fees |</a>
+<a href='{%url "students:hostel" %}'>view hostel |</a>
+<a href='{%url "students:borrowing" %}'>Library Information |</a>
+<a href='{%url "logout" %}'> logout|</a>
+{% endif %}
+{% endif %}
+
+</div>

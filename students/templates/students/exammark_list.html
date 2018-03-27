@@ -1,0 +1,41 @@
+{% extends "base_site.html"%}
+{%block head_title%} Subjects ||{{block.super}}{%endblock head_title%}
+
+
+
+{%block content %}
+<h1> Examination Results</h1>
+
+
+
+<table border="1" cellpadding="1">
+
+
+<th>subject name</th>
+<th>paper1 Mark</th>
+<th>papert2 Mark</th>
+<th>paper3 Mark</th>
+<th>paper4 Mark</th>
+<th>paper5 Mark </th>
+<th>paper6 Mark</th>
+<th>Total Mark </th>
+<th>comment </th>
+{% for obj in object_list%}
+
+<tr>
+
+<td>{{obj.subject_name}}</td>
+<td>{{obj.paper1_Mark}}</td>
+<td>{{obj.paper2_Mark}}</td>
+<td>{{obj.paper3_Mark}}</td>
+<td>{{obj.paper4_Mark}}</td>
+<td>{{obj.paper5_Mark}}</td>
+<td>{{obj.paper6_Mark}}</td>
+<td>{{obj.Total_Mark}}</td>
+<td>{{obj.comment}}</td>
+
+</tr>
+{%endfor%}
+</table>
+{%endblock content%}
+

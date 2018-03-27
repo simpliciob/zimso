@@ -1,0 +1,29 @@
+ <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+				  <li><a href='{%url "home" %}'>home |</a></li>
+                  <li><a href='{%url "about" %}'>about |</a></li>
+                  <li><a href='{%url "contact" %}'>contact |</a></li>
+				  
+                  {% if request.user.is_authenticated %}
+                   <li><a href='{%url "teachers:examlist" %}'>view marks| </a></li>
+                   <li><a href='{%url "teachers:addmark" %}'>Add Exam Marks |</a></li>
+                   <li><a href='{%url "continuous:listcontinuous" %}'>view coursework |</a></li>
+                   <li><a href='{%url "continuous:addcontinuous" %}'>Add coursework |</a></li>
+                   <li> <a href='{%url "attendance:attendancelist" %}'>view attendance |</a></li>
+                   <li><a href='{%url "attendance:addattendance" %}'>Add attendance |</a></li>
+				   <li><a href='{%url "register" %}'>register|</a></li>
+
+                   {%endif%}
+                 <!--- <li><a href="index.html">Examination Results</a></li>
+				  <li><a href="index.html">Continuous Assessment</a></li>
+				  <li><a href="index.html">Exam Timetable</a></li>
+				  <li><a href="index.html">Announcements</a></li>
+				  <li><a href="index.html">View Prefects</a></li>
+				  <li><a href="index.html">View Fees Payment</a></li>
+				  <li><a href="index.html">view Calender</a></li>
+				   <li><a href="index.html">Edit password/email</a></li>-->
+				  </ul>
+              </div>
+</div>
